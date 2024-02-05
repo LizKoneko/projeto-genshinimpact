@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page Genshin Impact</title>
+    <link rel="shortcut icon" href="./src/imagens/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/chalet">
+    <!-- use a fonte que quer -->
+    <link rel="stylesheet" href="./src/css/reset.css">
+    <link rel="stylesheet" href="./src/css/style.css">
+    <link rel="stylesheet" href="./src/css/fonte.css">
+    <link rel="stylesheet" href="./src/css/responsive.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="cabecalho__logo">
+            <img src="./src/imagens/logo-hoyoverse.jpg" alt="logo hoyoverse" width="30px" height="35px">
+
+            <hr class="cabecalho__logo__linha">
+            
+            <img src="./src/imagens/logo-genshin-impact.png" alt="logo genshin impact" width="110" height="40">
+        </div>
+        <nav>
+            <ul class="cabecalho__menu">
+                <li>
+                    <a href="#home">Home</a>
+                </li>
+                <li>
+                    <a href="#jogue-ja">Jogar</a>
+                </li>
+                <li>
+                    <a href="https://www.hoyoverse.com/pt-pt/news/101562" target="_blank">Suporte <img src="./src/imagens/icone-link.svg" alt="ícone de link de suporte"></a>
+                    
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="home" id="home">
+        <img class="home__imagem-fundo" src="./src/imagens/bg-main.jpg" alt="imagem de fundo">
+        <!-- qualquer coisa o height é 691 -->
+
+        <div class="home__informacoes">
+            <div class="home__informacoes__lista-de-jogos">
+                <img src="./src/imagens/logo-genshin-impact.png" alt="logo genshin impact">
+            </div>
+            <h1 class="home__informacoes__titulo">Disponível para todas as plataformas</h1>
+            <p class="home__informacoes__texto">Experimente a maravilhosa história de Genshin Impact, com combate divertido e ambientação única.</p>
+            <a class="home__informacoes__btn-jogar" href="#jogar">Jogue já</a>
+        </div>
+    </main>
+    <section class="jogue-ja" id="jogar">
+        <h2 class="jogue-ja__titulo">Jogue já</h2>
+        <div class="jogue-ja__cartao">
+            <img class="jogue-ja__cartao__capa-do-jogo" src="./src/imagens/capa-genshin-impact.png" alt="capa de genshin impact">
+
+            <div class="jogue-ja__cartao__informacoes">
+                <h3>Genshin Impact</h3>
+                <p>
+                    Inclui uma história <strong>emocionante</strong> que pode te fazer chorar <strong>sem</strong> aviso prévio.
+                </p>
+                <ul class="jogue-ja__cartao__informacoes__plataformas">
+                    <li>
+                        <img src="./src/imagens/logo-ps5.svg" alt="logo playstation 5">
+                    </li>
+                    <li>
+                        <img src="./src/imagens/icons8-mac-os.svg" alt="logo iOS"> iOS
+                    </li>
+                    <li>
+                        <img src="./src/imagens/logo-ps4.svg" alt="logo playstation 4">
+                    </li>
+                    <li>
+                        <img src="./src/imagens/logo-pc.svg" alt="logo pc">
+                    </li>
+                    <li>
+                        <img src="./src/imagens/icons8-android-os.svg" alt="logo android"> Android
+                    </li>
+                </ul>
+            </div>
+            <button class="jogue-ja__cartao__btn-plataforma ">
+                Selecione a plataforma
+
+                <ul class="jogue-ja__cartao__btn-plataforma__plataformas">
+                    <li>
+                        <img src="./src/imagens/logo-ps5.svg" alt="logo playstation 5">
+                    </li>
+                    <li>
+                        <img src="./src/imagens/icons8-mac-os.svg" alt="logo iOS"> 
+                    </li>
+                    <li>
+                        <img src="./src/imagens/logo-ps4.svg" alt="logo playstation 4">
+                    </li>
+                    <li>
+                        <img src="./src/imagens/icons8-android-os.svg" alt="logo android"> 
+                    </li>
+                    <li>
+                        <img src="./src/imagens/logo-pc.svg" alt="logo pc">
+                    </li>
+                </ul>
+
+            </button>
+        </div>
+    </section>
+    <footer class="rodape"></footer>
+    <script src="./src/js/index.js"></script>
+</body>
+</html>

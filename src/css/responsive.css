@@ -1,0 +1,69 @@
+@media (max-width: 1024px){
+        .cabecalho{
+            justify-content: center;
+            flex-direction: column;
+            padding: 50px 0;
+            gap: 15px;
+        }
+        
+        .cabecalho__menu li a{
+            padding: 12px 15px;
+        }
+
+        .home__informacoes{
+            padding: 30px;
+        }
+
+        .home__informacoes img{
+            max-width: 150px;
+        }
+
+        .home__informacoes__titulo{
+            font-size: 40px;
+        }
+
+        .jogue-ja__cartao{
+            width: 70%;
+            /* larguras com porcentagem é melhor do que absolutas(botoes, imagens) na maioria dos lugares */
+        }
+    }
+
+/* a partir do momento em que a tela tiver com 1024 ele vai aplicar a regra */
+@media (max-width: 768px){
+    .home__informacoes__btn-jogar{
+            width: 100%;
+        }
+
+    .jogue-ja{
+        padding: 30px;
+    }
+
+    .jogue-ja__cartao{
+        padding: 80px 20px;
+        width: 100%;
+    }
+
+    .jogue-ja__cartao__informacoes h3{
+        font-size: 35px;
+    }
+    
+    .jogue-ja__cartao__informacoes__plataformas{
+        flex-direction: column;
+    }
+
+    .jogue-ja__cartao__btn-plataforma{
+        margin-top: 15px;
+        padding: 15px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 450px) {
+    main::after{
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.4) 100%, transparent 65%);
+    }
+
+    .jogue-ja__cartao__capa-do-jogo{
+        max-width: 80%;
+    }
+}

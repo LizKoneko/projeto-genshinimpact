@@ -1,0 +1,236 @@
+body {
+  background-color: #282828;
+  color: #fff;
+}
+
+.cabecalho {
+  height: 60px;
+  background-color: #0b0b0b;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 80px;
+  border-bottom: 1px solid #282828;
+}
+
+.cabecalho__logo {
+  display: flex;
+  gap: 15px;
+}
+
+.cabecalho__menu {
+  display: flex;
+  gap: 30px;
+}
+
+.cabecalho__menu li a {
+  padding: 19px 30px;
+  color: #e8e8e8;
+  font-size: 15px;
+  font-family: "Chalet";
+}
+
+.cabecalho__menu li a:hover {
+  border-bottom: 2px solid #fff;
+}
+
+.home {
+  display: flex;
+  position: relative;
+  min-height: calc(100vh - 60px);
+}
+
+/* :: é um pseudoelemento, como se estivessemos criando um elemento html pelo css, nesse caso é uma "tag" que vem dps do home */
+.home::after {
+  content: "";
+  position: absolute;
+  /* o position absolute faz o elemento sair do fluxo normal (que seria embaixo da imagem) e ir pra cima */
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.85),
+    rgba(0, 0, 0, 0.7) 35%,
+    transparent 65%
+  );
+  /* isso aqui é realmente algo interessante de se anotar e lembrar */
+}
+
+.home__imagem-fundo {
+  width: 100%;
+  object-fit: cover;
+  /* vai adequar a imagem para o espaço disponível sem ela perder a proporção */
+}
+
+.home__informacoes {
+  position: absolute;
+  z-index: 1;
+  /* faz as informações ficarem por cima do gradiente que colocamos, z é eixo de profundidade */
+  min-height: calc(100vh - 60px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 32px;
+  padding: 80px 80px 80px 170px;
+  max-width: 780px;
+}
+
+.home__informacoes img {
+  max-width: 190px;
+}
+
+.home__informacoes__titulo {
+  font-family: "ChaletComprime";
+  font-size: 55px;
+}
+
+.home__informacoes__texto {
+  font-family: "Chalet";
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.home__informacoes__btn-jogar {
+  background-color: rgba(255, 255, 255, 0.1);
+  /* o .1 é a opacidade */
+  border: 0.5px solid #fff;
+  border-radius: 4px;
+  font-family: "ChaletComprime";
+  font-size: 28px;
+  text-align: center;
+  padding: 30px 40px;
+  text-transform: uppercase;
+  width: 50%;
+}
+
+.home__informacoes__btn-jogar:hover {
+  background-color: #fff;
+  color: #000;
+  transition: all 0.3s ease-in;
+}
+
+.jogue-ja {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  padding: 50px;
+}
+
+.jogue-ja__titulo {
+  font-family: "ChaletComprime";
+  font-size: 50px;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+
+.jogue-ja__cartao {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #000;
+  width: 50%;
+  border-radius: 10px;
+  padding: 80px;
+  gap: 40px;
+}
+
+.jogue-ja__cartao__capa-do-jogo {
+  width: 270px;
+}
+
+.jogue-ja__cartao__informacoes {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.jogue-ja__cartao__informacoes h3 {
+  font-family: "ChaletComprime";
+  font-size: 52px;
+  font-weight: 700;
+}
+
+.jogue-ja__cartao__informacoes p {
+  color: #e8e8e8;
+  font-family: "Chalet";
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.jogue-ja__cartao__informacoes__plataformas {
+  font-family: "ChaletComprime";
+  font-size: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: center;
+}
+
+.jogue-ja__cartao__btn-plataforma {
+  font-family: "ChaletComprime";
+  font-size: 26px;
+  padding: 15px 25px;
+  background-color: #0b0b0b;
+  border: 1px solid #e8e8e8;
+  color: #fff;
+  cursor: pointer;
+  width: 100%;
+}
+
+.jogue-ja__cartao__btn-plataforma__plataformas {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: all 0.3s ease-in;
+  display: none;
+  opacity: 0;
+}
+
+.jogue-ja__cartao__btn-plataforma__plataformas.ativo {
+  display: flex;
+  opacity: 1;
+}
+
+.jogue-ja__cartao__btn-plataforma__plataformas li {
+  padding: 20px;
+}
+
+.jogue-ja__cartao__btn-plataforma__plataformas li:nth-child(1) {
+  border: 1px solid #00439c;
+}
+
+.jogue-ja__cartao__btn-plataforma__plataformas li:nth-child(1):hover {
+  background-color: #00439c;
+}
+.jogue-ja__cartao__btn-plataforma__plataformas li:nth-child(2) {
+  border: 1px solid #387a26;
+}
+
+.jogue-ja__cartao__btn-plataforma__plataformas li:nth-child(2):hover {
+  background-color: #387a26;
+}
+
+.jogue-ja__cartao__btn-plataforma__plataformas li:nth-child(3) {
+  border: 1px solid #00439c;
+}
+
+.jogue-ja__cartao__btn-plataforma__plataformas li:nth-child(3):hover {
+  background-color: #00439c;
+}
+
+.jogue-ja__cartao__btn-plataforma__plataformas li:nth-child(4) {
+  border: 1px solid #387a26;
+}
+
+.jogue-ja__cartao__btn-plataforma__plataformas li:nth-child(4):hover {
+  background-color: #387a26;
+}
+.jogue-ja__cartao__btn-plataforma__plataformas li:nth-child(5) {
+  border: 1px solid #fcaf17;
+}
+
+.jogue-ja__cartao__btn-plataforma__plataformas li:nth-child(5):hover {
+  background-color: #fcaf17;
+}
